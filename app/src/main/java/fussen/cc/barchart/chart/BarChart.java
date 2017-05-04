@@ -1,4 +1,4 @@
-package fussen.cc.barchart;
+package fussen.cc.barchart.chart;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -14,8 +14,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import fussen.cc.barchart.ChartAnimator;
+
 /**
  * Created by Fussen on 2017/4/21.
+ *
+ * 不可滚动的条形图
  */
 public class BarChart extends View {
 

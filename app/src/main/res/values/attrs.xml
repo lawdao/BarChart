@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="Heart_View">
+        <attr name="background_color" format="color" />
+        <attr name="progress_color" format="color" />
+    </declare-styleable>
+</resources>
