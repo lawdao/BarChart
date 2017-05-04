@@ -7,8 +7,11 @@
 
 # 效果
 
+1. 不可滑动。
+
 ![效果1](http://ww3.sinaimg.cn/large/006tKfTcgy1feuhdgxuufg30940gctau.gif)
 
+2. 可滑动。
 
 ![效果1](http://ww1.sinaimg.cn/large/006tNbRwgy1ff9dfgl7t8g30940gbk6u.gif)
 
