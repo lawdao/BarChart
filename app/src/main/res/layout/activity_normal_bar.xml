@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
     android:orientation="vertical"
     android:padding="16dp"
     tools:context="fussen.cc.barchart.activity.ScrollBarActivity">
@@ -23,6 +24,7 @@
 
     <fussen.cc.barchart.chart.BarChart
         android:id="@+id/barchart"
+        android:background="@android:color/white"
         android:layout_width="match_parent"
         android:layout_height="350dp"
         android:layout_marginTop="20dp" />

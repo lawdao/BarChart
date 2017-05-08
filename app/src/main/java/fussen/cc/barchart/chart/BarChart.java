@@ -18,7 +18,7 @@ import fussen.cc.barchart.ChartAnimator;
 
 /**
  * Created by Fussen on 2017/4/21.
- *
+ * <p>
  * 不可滚动的条形图
  */
 public class BarChart extends View {
@@ -320,7 +320,10 @@ public class BarChart extends View {
 
             for (int i = 0; i < verticalList.size(); i++) {
                 textXpaint.getTextBounds(horizontalList.get(i), 0, horizontalList.get(i).length(), mBound);
-                canvas.drawText(horizontalList.get(i), textTempStart, mHeight + paddingTop - 60f + mBound.height() / 2f, textXpaint);
+
+                Paint.FontMetricsInt fontMetrics = textXpaint.getFontMetricsInt();
+                int baseline = (int) (mHeight + paddingTop - bottomHeight + ((bottomHeight - fontMetrics.bottom + fontMetrics.top) / 2 - fontMetrics.top));
+                canvas.drawText(horizontalList.get(i), textTempStart, baseline, textXpaint);
 //                canvas.drawLine(textTempStart, mHeight + paddingTop - bottomHeight, textTempStart, 0, linePaint);
                 textTempStart += (barWidth + interval);
             }
@@ -331,9 +334,14 @@ public class BarChart extends View {
 
 //                canvas.drawLine(textTempStart, mHeight + paddingTop - bottomHeight, textTempStart, 0, linePaint);
 
+
                     //画横轴
                     textXpaint.getTextBounds(horizontalList.get(i), 0, horizontalList.get(i).length(), mBound);
-                    canvas.drawText(horizontalList.get(i), textTempStart, mHeight + paddingTop - 60f + mBound.height() / 2f, textXpaint);
+
+                    Paint.FontMetricsInt fontMetrics = textXpaint.getFontMetricsInt();
+
+                    int baseline = (int) (mHeight + paddingTop - bottomHeight + ((bottomHeight - fontMetrics.bottom + fontMetrics.top) / 2 - fontMetrics.top));
+                    canvas.drawText(horizontalList.get(i), textTempStart, baseline, textXpaint);
 
                     textTempStart += preBarWidth;
                 }
@@ -343,7 +351,10 @@ public class BarChart extends View {
                     if (i % 4 == 0) {
                         //画横轴
                         textXpaint.getTextBounds(horizontalList.get(i), 0, horizontalList.get(i).length(), mBound);
-                        canvas.drawText(horizontalList.get(i), textTempStart, mHeight + paddingTop - 60f + mBound.height() / 2f, textXpaint);
+
+                        Paint.FontMetricsInt fontMetrics = textXpaint.getFontMetricsInt();
+                        int baseline = (int) (mHeight + paddingTop - bottomHeight + ((bottomHeight - fontMetrics.bottom + fontMetrics.top) / 2 - fontMetrics.top));
+                        canvas.drawText(horizontalList.get(i), textTempStart, baseline, textXpaint);
                     }
                     textTempStart += preBarWidth;
                 }

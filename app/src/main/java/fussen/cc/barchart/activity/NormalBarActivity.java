@@ -20,6 +20,7 @@ public class NormalBarActivity extends AppCompatActivity implements View.OnClick
     private Random random;
 
     private int count =  30;
+    private String[] weeks;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +52,8 @@ public class NormalBarActivity extends AppCompatActivity implements View.OnClick
 
         barChart.setHorizontalList(horizontalList);
         barChart.setVerticalList(verticalList);
+
+        weeks = new String[]{"日", "一", "二", "三", "四", "五", "六"};
     }
 
 
@@ -80,8 +83,9 @@ public class NormalBarActivity extends AppCompatActivity implements View.OnClick
                 for (int i = 0; i < 6; i++) {
                     horizontalList.add("" + i);
                 }
+//                horizontalList= Arrays.asList(weeks);
 
-                while (verticalList.size() < 6) {
+                while (verticalList.size() < 7) {
                     int randomInt = random.nextInt(1000);
                     verticalList.add((float) randomInt);
                 }
