@@ -258,9 +258,7 @@ public class BarChart extends View {
                 //每个数据点所占的Y轴高度
                 float barHeight = verticalList.get(i) / Float.valueOf(maxValue) * 100f * size;
 
-                float percent = Math.min(barHeight / (mHeight - bottomHeight), mAnimator.getPhaseY());//每个柱子的高度占有效view的高度百分比
-
-                float realBarHeight = percent * (mHeight - bottomHeight);//变化的柱子高度
+                float realBarHeight = barHeight * mAnimator.getPhaseY();
 
                 if (verticalList.get(0) == 0) {
                     canvas.drawRect(chartTempStart,
@@ -286,9 +284,7 @@ public class BarChart extends View {
                 //每个数据点所占的Y轴高度
                 float barHeight = verticalList.get(i) / Float.valueOf(maxValue) * 100f * size;
 
-                float percent = Math.min(barHeight / (mHeight - bottomHeight), mAnimator.getPhaseY());//每个柱子的高度占有效view的高度百分比
-
-                float realBarHeight = percent * (mHeight - bottomHeight);//变化的柱子高度
+                float realBarHeight = barHeight * mAnimator.getPhaseY();
 
                 //画柱状图 矩形
                 RectF rectF = new RectF();

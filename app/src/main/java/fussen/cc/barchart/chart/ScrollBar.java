@@ -15,7 +15,6 @@ import android.support.v4.view.ViewCompat;
 import android.support.v4.view.animation.FastOutLinearInInterpolator;
 import android.text.TextPaint;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
@@ -484,9 +483,7 @@ public class ScrollBar extends View {
             //每个数据点所占的Y轴高度
             float barHeight = verticalList.get(i) / Float.valueOf(maxValue) * 100f * size;
 
-            float percent = Math.min(barHeight / (mHeight - bottomHeight), mAnimator.getPhaseY());//每个柱子的高度占有效view的高度百分比
-
-            float realBarHeight = percent * (mHeight - bottomHeight);//变化的柱子高度
+            float realBarHeight = barHeight * mAnimator.getPhaseY();
 
             //画柱状图 矩形
             RectF rectF = new RectF();
