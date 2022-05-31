@@ -17,12 +17,3 @@
 
 图片看起来有点失真，还伴随点卡顿，这是由于录像是电脑和手机连接不稳定造成的，真实的动画是不会有任何卡顿的。
 
-
-
-
-# 关注我
-
-1. 扫描下面的二维码，即可关注AppCode公众号
-
-
-![AppCode](https://ww2.sinaimg.cn/large/006tNbRwgy1fdj5g7wwl8j3076076aaj.jpg)
